@@ -32,27 +32,28 @@
        <div class="alert">Your message has been sent</div>
       <form method="post" action="index.html" id="contactForm">
         <h2>Nibh Hendrerit Sodales</h2>
+
         <label>
           First Name:
-          <input type="text" name="firstName" id="input--first_name" />
+          <input type="text" name="firstName" id="input--first_name" required />
         </label>
         <label>
           Last Name:
-          <input type="text" name="lastName" id="input--last_name"/>
+          <input type="text" name="lastName" id="input--last_name" required />
         </label>
         <label>
           Phone Number:
-          <input type="text" name="phone" id="input--phone"/>
+          <input type="text" name="phone" id="input--phone" required />
         </label>
         <label>
           Email Address:
-          <input type="text" name="email" id="input--email"/>
+          <input type="text" name="email" id="input--email" required />
         </label>
         <div id="form__eduLevel">
         Current Education Level:
         <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" name="eduLevel" id="input--diploma" class="form-check-input" value="diploma" checked>High School Diploma
+          <input type="radio" name="eduLevel" id="input--diploma" class="form-check-input" value="diploma" checked required />High School Diploma
         </label>
        </div>
        <div class="form-check">
@@ -63,19 +64,19 @@
       </div>
       <div class="form-check">
           <label class="form-check-label">
-          <input type="radio" name="eduLevel" id="input--batchelor" class="form-check-input" value="batchelor">
+          <input type="radio" name="eduLevel" id="input--batchelor" class="form-check-input" value="batchelor" required />
           Bachelor Degree
         </label>
       </div>
         <div class="form-check">
        <label class="form-check-label">
-          <input type="radio" name="eduLevel" id="input--master" class="form-check-input" value="master">
+          <input type="radio" name="eduLevel" id="input--master" class="form-check-input" value="master" required />
           Master Degree
         </label>
       </div>
       <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" name="eduLevel" id="input--doctor" class="form-check-input" value="doctor">
+          <input type="radio" name="eduLevel" id="input--doctor" class="form-check-input" value="doctor" required />
           Doctoral Degree
         </label>
       </div>
