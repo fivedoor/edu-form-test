@@ -29,7 +29,7 @@
 </div>
 <div class="container">
   <img class="banner" src="images/banner.jpg" alt="" />
-  <form class="needs-validation" novalidate>
+  <form id="contactForm" class="needs-validation" novalidate>
     <h2>Nibh Hendrerit Sodales</h2>
  <div class="alert">Your message has been sent</div>
     <label for="input--first_name">
@@ -46,7 +46,7 @@
 
     <label>
       Phone Number:
-      <input type="number" class="form-control"  name="phone" id="input--phone" required />
+      <input type="text" class="form-control"  pattern="^[(]\d{3}[)][ ]\d{3}-\d{4}$" name="phone" id="input--phone" required />
     </label>
 
     <label>
