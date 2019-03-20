@@ -10,66 +10,72 @@
   <link rel="stylesheet" href="css/normalize.css">
   <!--  bootstrap css -->        
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!--   
+<!--   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <!--  fontawsome social icons css -->        
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!--  googlefonts -->        
   <link href="https://fonts.googleapis.com/css?family=" rel="stylesheet">
   <!--build:css css/styles.min.css-->    
-    <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <!--endbuild-->
 </head>
 <body>
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a §href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
- <div class="header">
-      <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
-    </div>
-    <div class="container">
-      <img class="banner" src="images/banner.jpg" alt="" />
-       <div class="alert">Your message has been sent</div>
-      <form method="post" action="index.html" id="contactForm">
-        <h2>Nibh Hendrerit Sodales</h2>
+<div class="header">
+  <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+</div>
+<div class="container">
+  <img class="banner" src="images/banner.jpg" alt="" />
+  <form class="needs-validation" novalidate>
+    <h2>Nibh Hendrerit Sodales</h2>
+ <div class="alert">Your message has been sent</div>
+    <label for="input--first_name">
+      First Name:
+      <input type="text" class="form-control" name="firstName" id="input--first_name" placeholder="First name" required />
+    </label>
 
-        <label>
-          First Name:
-          <input type="text" name="firstName" id="input--first_name" required />
-        </label>
-        <label>
-          Last Name:
-          <input type="text" name="lastName" id="input--last_name" required />
-        </label>
-        <label>
-          Phone Number:
-          <input type="text" name="phone" id="input--phone" required />
-        </label>
-        <label>
-          Email Address:
-          <input type="text" name="email" id="input--email" required />
-        </label>
-        <div id="form__eduLevel">
-        Current Education Level:
-        <div class="form-check">
+    <div class="valid-feedback">Looks good!</div>
+
+    <label>
+      Last Name:
+      <input type="text" class="form-control"  name="lastName" id="input--last_name" required />
+    </label>
+
+    <label>
+      Phone Number:
+      <input type="number" class="form-control"  name="phone" id="input--phone" required />
+    </label>
+
+    <label>
+      Email Address:
+      <input type="email" class="form-control"  name="email" id="input--email" required class="email-field"/>
+    </label>
+
+    <!--  Edu Level -->
+    <div id="form__eduLevel">
+      Current Education Level:
+      <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" name="eduLevel" id="input--diploma" class="form-check-input" value="diploma" checked required />High School Diploma
+          <input type="radio" name="eduLevel" id="input--diploma" class="form-check-input" value="diploma" required />High School Diploma
         </label>
-       </div>
-       <div class="form-check">
+      </div>
+      <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" name="eduLevel" id="input--associate" class="form-check-input" value="associate">
+          <input type="radio" name="eduLevel" id="input--associate" class="form-check-input" value="associate" required/>
           Associate Degree
         </label>
       </div>
       <div class="form-check">
-          <label class="form-check-label">
+        <label class="form-check-label">
           <input type="radio" name="eduLevel" id="input--batchelor" class="form-check-input" value="batchelor" required />
           Bachelor Degree
         </label>
       </div>
-        <div class="form-check">
-       <label class="form-check-label">
+      <div class="form-check">
+        <label class="form-check-label">
           <input type="radio" name="eduLevel" id="input--master" class="form-check-input" value="master" required />
           Master Degree
         </label>
@@ -78,42 +84,45 @@
         <label class="form-check-label">
           <input type="radio" name="eduLevel" id="input--doctor" class="form-check-input" value="doctor" required />
           Doctoral Degree
+          <div class="invalid-feedback" >Please choose an option</div>
         </label>
       </div>
-       </div>
-        <div class="actions">
-          <button type="submit">Request Information</button>
-        </div>
-      </form>
-      <div class="content">
-        <p>
-          Aliquam sed nibh elit. Morbi non augue eu turpis dictum convallis sed et sapien. 
-          Donec ac pretium nisi. Cras ac erat ut nibh hendrerit sodales eget in orci. Duis 
-          pellentesque gravida orci ac ornare. In hac habitasse platea dictumst. Sed justo 
-          sapien, faucibus eu aliquet et, molestie quis orci.
-        </p>
-        <p>
-          Vivamus pulvinar, felis sed porttitor luctus, ligula nisl hendrerit nibh, vitae 
-          lobortis massa odio at elit. Sed et felis metus, nec eleifend dui. Quisque eget 
-          semper eros. Etiam gravida lobortis nibh, vitae viverra velit rhoncus sodales.
-        </p>
-      </div>
- <!--  bootstrap js / forms /jquery -->        
+    </div>
+    <!-- / Edu Level -->
+    <div class="form-group actions" >
+      <button type="submit" id="contactForm__submit" class="btn btn-primary">Request Information</button>
+    </div>
+  </form>
+
+  <div class="content">
+    <p>
+      Aliquam sed nibh elit. Morbi non augue eu turpis dictum convallis sed et sapien. 
+      Donec ac pretium nisi. Cras ac erat ut nibh hendrerit sodales eget in orci. Duis 
+      pellentesque gravida orci ac ornare. In hac habitasse platea dictumst. Sed justo 
+      sapien, faucibus eu aliquet et, molestie quis orci.
+    </p>
+    <p>
+      Vivamus pulvinar, felis sed porttitor luctus, ligula nisl hendrerit nibh, vitae 
+      lobortis massa odio at elit. Sed et felis metus, nec eleifend dui. Quisque eget 
+      semper eros. Etiam gravida lobortis nibh, vitae viverra velit rhoncus sodales.
+    </p>
+  </div>
+  <!--  bootstrap js / forms /jquery -->        
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-   <!-- Firebase Form --> 
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <!-- Firebase Form --> 
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
   <!--build:js js/main.min.js -->
   <script src="js/lib/a-library.js"></script>
-<!--     <script src="js/plugins.js"></script>
- -->  <script src="js/lib/another-library.js"></script>
+  <!--     <script src="js/plugins.js"></script>--> 
+  <script src="js/lib/another-library.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <!--  <script>
 window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
 ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
